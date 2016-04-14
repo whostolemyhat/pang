@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1A04BF4E1CC0357300849DE1 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF4D1CC0357300849DE1 /* ResourcePath.mm */; };
-		1A04BF511CC0357300849DE1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF501CC0357300849DE1 /* main.cpp */; };
+		1A04BF511CC0357300849DE1 /* demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF501CC0357300849DE1 /* demo.cpp */; };
 		1A04BF541CC0357300849DE1 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A04BF531CC0357300849DE1 /* cute_image.jpg */; };
 		1A04BF561CC0357300849DE1 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 1A04BF551CC0357300849DE1 /* nice_music.ogg */; };
 		1A04BF581CC0357300849DE1 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A04BF571CC0357300849DE1 /* sansation.ttf */; };
 		1A04BF5A1CC0357300849DE1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A04BF591CC0357300849DE1 /* icon.png */; };
+		1A04BF611CC035EE00849DE1 /* Pang.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF601CC035EE00849DE1 /* Pang.cpp */; };
+		1A04BF641CC0362200849DE1 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF621CC0362200849DE1 /* Game.cpp */; };
+		1A04BF671CC039C900849DE1 /* mainmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A04BF651CC039C900849DE1 /* mainmenu.png */; };
+		1A04BF681CC039C900849DE1 /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A04BF661CC039C900849DE1 /* splashscreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +24,16 @@
 		1A04BF4C1CC0357300849DE1 /* Pang-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pang-Info.plist"; sourceTree = "<group>"; };
 		1A04BF4D1CC0357300849DE1 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 		1A04BF4F1CC0357300849DE1 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
-		1A04BF501CC0357300849DE1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1A04BF501CC0357300849DE1 /* demo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = demo.cpp; sourceTree = "<group>"; };
 		1A04BF531CC0357300849DE1 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
 		1A04BF551CC0357300849DE1 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		1A04BF571CC0357300849DE1 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		1A04BF591CC0357300849DE1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		1A04BF601CC035EE00849DE1 /* Pang.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pang.cpp; sourceTree = SOURCE_ROOT; };
+		1A04BF621CC0362200849DE1 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		1A04BF631CC0362200849DE1 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		1A04BF651CC039C900849DE1 /* mainmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainmenu.png; sourceTree = "<group>"; };
+		1A04BF661CC039C900849DE1 /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashscreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +66,12 @@
 		1A04BF4A1CC0357300849DE1 /* Pang */ = {
 			isa = PBXGroup;
 			children = (
+				1A04BF601CC035EE00849DE1 /* Pang.cpp */,
+				1A04BF631CC0362200849DE1 /* Game.h */,
+				1A04BF621CC0362200849DE1 /* Game.cpp */,
 				1A04BF4D1CC0357300849DE1 /* ResourcePath.mm */,
 				1A04BF4F1CC0357300849DE1 /* ResourcePath.hpp */,
-				1A04BF501CC0357300849DE1 /* main.cpp */,
+				1A04BF501CC0357300849DE1 /* demo.cpp */,
 				1A04BF521CC0357300849DE1 /* Resources */,
 				1A04BF4B1CC0357300849DE1 /* Supporting Files */,
 			);
@@ -77,6 +89,8 @@
 		1A04BF521CC0357300849DE1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A04BF651CC039C900849DE1 /* mainmenu.png */,
+				1A04BF661CC039C900849DE1 /* splashscreen.png */,
 				1A04BF531CC0357300849DE1 /* cute_image.jpg */,
 				1A04BF551CC0357300849DE1 /* nice_music.ogg */,
 				1A04BF571CC0357300849DE1 /* sansation.ttf */,
@@ -142,6 +156,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A04BF681CC039C900849DE1 /* splashscreen.png in Resources */,
+				1A04BF671CC039C900849DE1 /* mainmenu.png in Resources */,
 				1A04BF5A1CC0357300849DE1 /* icon.png in Resources */,
 				1A04BF581CC0357300849DE1 /* sansation.ttf in Resources */,
 				1A04BF561CC0357300849DE1 /* nice_music.ogg in Resources */,
@@ -172,8 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A04BF511CC0357300849DE1 /* main.cpp in Sources */,
+				1A04BF611CC035EE00849DE1 /* Pang.cpp in Sources */,
+				1A04BF511CC0357300849DE1 /* demo.cpp in Sources */,
 				1A04BF4E1CC0357300849DE1 /* ResourcePath.mm in Sources */,
+				1A04BF641CC0362200849DE1 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +329,7 @@
 				1A04BF5F1CC0357300849DE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
