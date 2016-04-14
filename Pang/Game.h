@@ -18,6 +18,9 @@ private:
     static bool isExiting();
     static void gameLoop();
     
+    static void showMenu();
+    static void showSplashScreen();
+    
     enum GameState {
         UNINITIALISED,
         SHOWING_SPLASH,
