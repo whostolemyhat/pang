@@ -36,7 +36,7 @@ bool Game::isExiting() {
 void Game::showSplashScreen() {
     SplashScreen splashScreen;
     splashScreen.show(_mainWindow);
-    _gameState = Game::SHOWING_SPLASH;
+    _gameState = Game::SHOWING_MENU;
 }
 
 void Game::showMenu() {
@@ -57,10 +57,9 @@ void Game::showMenu() {
 
 void Game::gameLoop() {
     sf::Event currentEvent;
-    while(_mainWindow.pollEvent(currentEvent)) {
         switch(_gameState) {
             case Game::SHOWING_SPLASH: {
-                showMenu();
+                showSplashScreen();
                 break;
             }
                 
@@ -73,7 +72,7 @@ void Game::gameLoop() {
                 sf::Event currentEvent;
                 
                 while(_mainWindow.pollEvent(currentEvent)) {
-                    _mainWindow.clear(sf::Color(125, 0, 0));
+                    _mainWindow.clear(sf::Color(239, 143, 80));
                     _mainWindow.display();
                     
                     if(currentEvent.type == sf::Event::Closed) {
@@ -90,7 +89,6 @@ void Game::gameLoop() {
                 break;
             }
         }
-    }
 }
 
 
