@@ -20,6 +20,9 @@
 		1A04BF6B1CC03AAB00849DE1 /* SplashScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF6A1CC03AAB00849DE1 /* SplashScreen.cpp */; };
 		1A04BF6F1CC0430D00849DE1 /* MainMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF6E1CC0430D00849DE1 /* MainMenu.cpp */; };
 		1A04BF711CC0EFC700849DE1 /* bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A04BF701CC0EFC700849DE1 /* bat.png */; };
+		1A04BF741CC1733200849DE1 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF731CC1733200849DE1 /* GameObject.cpp */; };
+		1A04BF771CC1764B00849DE1 /* PlayerBat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF761CC1764B00849DE1 /* PlayerBat.cpp */; };
+		1A04BF7C1CC17D5100849DE1 /* GameObjectManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF7B1CC17D5100849DE1 /* GameObjectManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,11 @@
 		1A04BF6E1CC0430D00849DE1 /* MainMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenu.cpp; sourceTree = "<group>"; };
 		1A04BF701CC0EFC700849DE1 /* bat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat.png; sourceTree = "<group>"; };
 		1A04BF721CC0F01800849DE1 /* GameObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		1A04BF731CC1733200849DE1 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		1A04BF751CC175DB00849DE1 /* PlayerBat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerBat.h; sourceTree = "<group>"; };
+		1A04BF761CC1764B00849DE1 /* PlayerBat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerBat.cpp; sourceTree = "<group>"; };
+		1A04BF7A1CC17A2300849DE1 /* GameObjectManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameObjectManager.h; sourceTree = "<group>"; };
+		1A04BF7B1CC17D5100849DE1 /* GameObjectManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObjectManager.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,16 +84,18 @@
 			isa = PBXGroup;
 			children = (
 				1A04BF6C1CC03B9900849DE1 /* helpers */,
+				1A04BF781CC1768B00849DE1 /* screens */,
 				1A04BF601CC035EE00849DE1 /* Pang.cpp */,
 				1A04BF631CC0362200849DE1 /* Game.h */,
 				1A04BF621CC0362200849DE1 /* Game.cpp */,
-				1A04BF6D1CC03BAD00849DE1 /* MainMenu.h */,
-				1A04BF6E1CC0430D00849DE1 /* MainMenu.cpp */,
-				1A04BF691CC03A6100849DE1 /* SplashScreen.h */,
-				1A04BF6A1CC03AAB00849DE1 /* SplashScreen.cpp */,
+				1A04BF721CC0F01800849DE1 /* GameObject.h */,
+				1A04BF731CC1733200849DE1 /* GameObject.cpp */,
+				1A04BF751CC175DB00849DE1 /* PlayerBat.h */,
+				1A04BF761CC1764B00849DE1 /* PlayerBat.cpp */,
 				1A04BF521CC0357300849DE1 /* Resources */,
 				1A04BF4B1CC0357300849DE1 /* Supporting Files */,
-				1A04BF721CC0F01800849DE1 /* GameObject.h */,
+				1A04BF7A1CC17A2300849DE1 /* GameObjectManager.h */,
+				1A04BF7B1CC17D5100849DE1 /* GameObjectManager.cpp */,
 			);
 			path = Pang;
 			sourceTree = "<group>";
@@ -120,6 +130,17 @@
 				1A04BF501CC0357300849DE1 /* demo.cpp */,
 			);
 			name = helpers;
+			sourceTree = "<group>";
+		};
+		1A04BF781CC1768B00849DE1 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				1A04BF6D1CC03BAD00849DE1 /* MainMenu.h */,
+				1A04BF6E1CC0430D00849DE1 /* MainMenu.cpp */,
+				1A04BF691CC03A6100849DE1 /* SplashScreen.h */,
+				1A04BF6A1CC03AAB00849DE1 /* SplashScreen.cpp */,
+			);
+			name = screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,10 +235,13 @@
 			files = (
 				1A04BF611CC035EE00849DE1 /* Pang.cpp in Sources */,
 				1A04BF6F1CC0430D00849DE1 /* MainMenu.cpp in Sources */,
+				1A04BF771CC1764B00849DE1 /* PlayerBat.cpp in Sources */,
 				1A04BF511CC0357300849DE1 /* demo.cpp in Sources */,
 				1A04BF4E1CC0357300849DE1 /* ResourcePath.mm in Sources */,
 				1A04BF641CC0362200849DE1 /* Game.cpp in Sources */,
 				1A04BF6B1CC03AAB00849DE1 /* SplashScreen.cpp in Sources */,
+				1A04BF741CC1733200849DE1 /* GameObject.cpp in Sources */,
+				1A04BF7C1CC17D5100849DE1 /* GameObjectManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

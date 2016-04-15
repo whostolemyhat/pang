@@ -10,6 +10,8 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 
+#include "PlayerBat.h"
+
 class Game {
 public:
     static void start();
@@ -32,4 +34,5 @@ private:
     
     static GameState _gameState;
     static sf::RenderWindow _mainWindow;
+    static PlayerBat _player;
 };

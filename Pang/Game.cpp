@@ -9,6 +9,7 @@
 #include "Game.h"
 #include "SplashScreen.h"
 #include "MainMenu.h"
+#include "ResourcePath.hpp"
 
 void Game::start() {
     if(_gameState != UNINITIALISED) {
@@ -16,6 +17,10 @@ void Game::start() {
     }
     
     _mainWindow.create(sf::VideoMode(1024, 768, 32), "Pang!");
+    
+    _player.load(resourcePath() + "bat.png");
+    _player.setPosition((1024/2) - 45, 700);
+    
     _gameState = Game::SHOWING_SPLASH;
     
     while(!isExiting()) {
@@ -73,6 +78,7 @@ void Game::gameLoop() {
                 
                 while(_mainWindow.pollEvent(currentEvent)) {
                     _mainWindow.clear(sf::Color(239, 143, 80));
+                    _player.draw(_mainWindow);
                     _mainWindow.display();
                     
                     if(currentEvent.type == sf::Event::Closed) {
@@ -94,3 +100,4 @@ void Game::gameLoop() {
 
 Game::GameState Game::_gameState = UNINITIALISED;
 sf::RenderWindow Game::_mainWindow;
+PlayerBat Game::_player;
