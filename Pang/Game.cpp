@@ -11,15 +11,24 @@
 #include "MainMenu.h"
 #include "ResourcePath.hpp"
 
+#include <iostream>
+
 void Game::start() {
     if(_gameState != UNINITIALISED) {
         return;
     }
     
-    _mainWindow.create(sf::VideoMode(1024, 768, 32), "Pang!");
+    _mainWindow.create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32), "Pang!");
     
-    _player.load(resourcePath() + "bat.png");
-    _player.setPosition((1024/2) - 45, 700);
+    PlayerBat *player = new PlayerBat();
+//    std::shared_ptr<PlayerBat> player (new PlayerBat() );
+    player->load(resourcePath() + "bat.png");
+    player->setPosition((SCREEN_WIDTH/2) - 45, 700);
+    _manager.add("player1", player);
+    
+    Ball *ball = new Ball();
+    ball->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+    _manager.add("ball", ball);
     
     _gameState = Game::SHOWING_SPLASH;
     
@@ -28,6 +37,20 @@ void Game::start() {
     }
     
     _mainWindow.close();
+}
+
+sf::RenderWindow& Game::getWindow() {
+    return _mainWindow;
+}
+
+const sf::Event& Game::getInput() {
+    sf::Event event;
+    _mainWindow.pollEvent(event);
+    return event;
+}
+
+const GameObjectManager& Game::getManager() {
+    return Game::_manager;
 }
 
 bool Game::isExiting() {
@@ -62,42 +85,51 @@ void Game::showMenu() {
 
 void Game::gameLoop() {
     sf::Event currentEvent;
-        switch(_gameState) {
-            case Game::SHOWING_SPLASH: {
-                showSplashScreen();
-                break;
-            }
-                
-            case Game::SHOWING_MENU: {
-                showMenu();
-                break;
-            }
-                
-            case Game::PLAYING: {
-                sf::Event currentEvent;
-                
-                while(_mainWindow.pollEvent(currentEvent)) {
-                    _mainWindow.clear(sf::Color(239, 143, 80));
-                    _player.draw(_mainWindow);
-                    _mainWindow.display();
-                    
-                    if(currentEvent.type == sf::Event::Closed) {
-                        _gameState = Game::EXITING;
-                    }
-                    
-                    if(currentEvent.type == sf::Event::KeyPressed) {
-                        if(currentEvent.key.code == sf::Keyboard::Key::Escape) {
-                            showMenu();
-                        }
-                    }
-                }
-                
-                break;
-            }
+    _mainWindow.pollEvent(currentEvent);
+    
+    switch(_gameState) {
+        case Game::UNINITIALISED:
+        case Game::PAUSED: {
+            std::cout << "Uninitialised or paused!" << std:: endl;
+            break;
         }
+            
+        case Game::SHOWING_SPLASH: {
+            showSplashScreen();
+            break;
+        }
+
+        case Game::SHOWING_MENU: {
+            showMenu();
+            break;
+        }
+
+        case Game::PLAYING: {
+            std::cout << currentEvent.type << std::endl;
+            
+            _mainWindow.clear(sf::Color(239, 143, 80));
+                
+            _manager.updateAll();
+            _manager.drawAll(_mainWindow);
+            _mainWindow.display();
+                
+            if(currentEvent.type == sf::Event::Closed) {
+                std::cout << "Exiting from playing" << std::endl;
+                _gameState = Game::EXITING;
+            }
+                    
+            if(currentEvent.type == sf::Event::KeyPressed) {
+                if(currentEvent.key.code == sf::Keyboard::Key::Escape) {
+                    showMenu();
+                }
+            }
+            
+            break;
+        }
+    }
 }
 
 
 Game::GameState Game::_gameState = UNINITIALISED;
 sf::RenderWindow Game::_mainWindow;
-PlayerBat Game::_player;
+GameObjectManager Game::_manager;

@@ -23,6 +23,8 @@
 		1A04BF741CC1733200849DE1 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF731CC1733200849DE1 /* GameObject.cpp */; };
 		1A04BF771CC1764B00849DE1 /* PlayerBat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF761CC1764B00849DE1 /* PlayerBat.cpp */; };
 		1A04BF7C1CC17D5100849DE1 /* GameObjectManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF7B1CC17D5100849DE1 /* GameObjectManager.cpp */; };
+		1A04BF7E1CD7F33B00849DE1 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A04BF7D1CD7F33B00849DE1 /* ball.png */; };
+		1A04BF811CD7F3C700849DE1 /* Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A04BF801CD7F3C700849DE1 /* Ball.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,9 @@
 		1A04BF761CC1764B00849DE1 /* PlayerBat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerBat.cpp; sourceTree = "<group>"; };
 		1A04BF7A1CC17A2300849DE1 /* GameObjectManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameObjectManager.h; sourceTree = "<group>"; };
 		1A04BF7B1CC17D5100849DE1 /* GameObjectManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObjectManager.cpp; sourceTree = "<group>"; };
+		1A04BF7D1CD7F33B00849DE1 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		1A04BF7F1CD7F35900849DE1 /* Ball.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		1A04BF801CD7F3C700849DE1 /* Ball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ball.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,14 +93,16 @@
 				1A04BF601CC035EE00849DE1 /* Pang.cpp */,
 				1A04BF631CC0362200849DE1 /* Game.h */,
 				1A04BF621CC0362200849DE1 /* Game.cpp */,
+				1A04BF7A1CC17A2300849DE1 /* GameObjectManager.h */,
+				1A04BF7B1CC17D5100849DE1 /* GameObjectManager.cpp */,
 				1A04BF721CC0F01800849DE1 /* GameObject.h */,
 				1A04BF731CC1733200849DE1 /* GameObject.cpp */,
 				1A04BF751CC175DB00849DE1 /* PlayerBat.h */,
 				1A04BF761CC1764B00849DE1 /* PlayerBat.cpp */,
+				1A04BF7F1CD7F35900849DE1 /* Ball.h */,
+				1A04BF801CD7F3C700849DE1 /* Ball.cpp */,
 				1A04BF521CC0357300849DE1 /* Resources */,
 				1A04BF4B1CC0357300849DE1 /* Supporting Files */,
-				1A04BF7A1CC17A2300849DE1 /* GameObjectManager.h */,
-				1A04BF7B1CC17D5100849DE1 /* GameObjectManager.cpp */,
 			);
 			path = Pang;
 			sourceTree = "<group>";
@@ -111,6 +118,7 @@
 		1A04BF521CC0357300849DE1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A04BF7D1CD7F33B00849DE1 /* ball.png */,
 				1A04BF651CC039C900849DE1 /* mainmenu.png */,
 				1A04BF701CC0EFC700849DE1 /* bat.png */,
 				1A04BF661CC039C900849DE1 /* splashscreen.png */,
@@ -206,6 +214,7 @@
 				1A04BF5A1CC0357300849DE1 /* icon.png in Resources */,
 				1A04BF581CC0357300849DE1 /* sansation.ttf in Resources */,
 				1A04BF561CC0357300849DE1 /* nice_music.ogg in Resources */,
+				1A04BF7E1CD7F33B00849DE1 /* ball.png in Resources */,
 				1A04BF541CC0357300849DE1 /* cute_image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +246,7 @@
 				1A04BF6F1CC0430D00849DE1 /* MainMenu.cpp in Sources */,
 				1A04BF771CC1764B00849DE1 /* PlayerBat.cpp in Sources */,
 				1A04BF511CC0357300849DE1 /* demo.cpp in Sources */,
+				1A04BF811CD7F3C700849DE1 /* Ball.cpp in Sources */,
 				1A04BF4E1CC0357300849DE1 /* ResourcePath.mm in Sources */,
 				1A04BF641CC0362200849DE1 /* Game.cpp in Sources */,
 				1A04BF6B1CC03AAB00849DE1 /* SplashScreen.cpp in Sources */,

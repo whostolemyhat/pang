@@ -36,3 +36,32 @@ void GameObject::setPosition(float x, float y) {
         _sprite.setPosition(x, y);
     }
 }
+
+sf::Vector2f GameObject::getPosition() const {
+    if(_isLoaded) {
+        return _sprite.getPosition();
+    }
+    return sf::Vector2f();
+}
+
+bool GameObject::isLoaded() const {
+    return _isLoaded;
+}
+
+sf::Sprite& GameObject::getSprite() {
+    return _sprite;
+}
+
+void GameObject::update(float elapsedTime) {}
+
+float GameObject::getHeight() const {
+    return _sprite.getLocalBounds().height;
+}
+
+float GameObject::getWidth() const  {
+    return _sprite.getLocalBounds().width;
+}
+
+sf::Rect<float> GameObject::getBoundingRect() const {
+    return _sprite.getGlobalBounds();
+}

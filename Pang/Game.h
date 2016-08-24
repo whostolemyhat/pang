@@ -9,12 +9,18 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
-
+#include "GameObjectManager.h"
 #include "PlayerBat.h"
+#include "Ball.h"
 
 class Game {
 public:
     static void start();
+    static sf::RenderWindow& getWindow();
+    const static sf::Event& getInput();
+    const static GameObjectManager& getManager();
+    const static int SCREEN_WIDTH = 1024;
+    const static int SCREEN_HEIGHT = 768;
     
 private:
     static bool isExiting();
@@ -34,5 +40,5 @@ private:
     
     static GameState _gameState;
     static sf::RenderWindow _mainWindow;
-    static PlayerBat _player;
+    static GameObjectManager _manager;
 };
